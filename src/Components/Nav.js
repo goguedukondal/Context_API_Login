@@ -3,8 +3,9 @@ import "./Nav.css";
 import { AuthContext } from "./Context";
 import { useContext } from "react";
 
-function Nav(props) {
-    const { setIsLoggedIn } = useContext(AuthContext);
+function Nav() {
+    // const { setIsLoggedIn } = useContext(AuthContext);
+    const { setIsLoggedIn ,user } = useContext(AuthContext);
     return (
       <div className="nav">
         <div id="title">
@@ -23,7 +24,7 @@ function Nav(props) {
             Logout
           </button>
           <span style={{ marginLeft: "30px", color: "yellow", fontSize: "22px" }}>
-            <b></b>
+            <b>{user.name}</b>
           </span>
         </div>
       </div>
