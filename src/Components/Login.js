@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext,useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./Context";
 var style = {
     width: "300px",
@@ -9,16 +9,16 @@ var style = {
     textAlign: "center",
   };
   function Login(props) {
-    const { setIsLoggedIn } = useContext(AuthContext);
-    const [user, setUser] = useState({
-      name: "",
-      password: "",
-    });
+    const { setIsLoggedIn ,user,setUser } = useContext(AuthContext);
+    // const [user, setUser] = useState({
+    //   name: "",
+    //   password: "",
+    // });
   
     const handleAuthentication = () => {
       if (
-        (user.name === "kabir" && user.password === "kabir@123") ||
-        (user.name === "admin" && user.password === "admin@123")
+        (user.name === "Kabir" && user.password === "kabir@123") ||
+        (user.name === "Admin" && user.password === "admin@123")
       ) {
         setIsLoggedIn(true);
       } else {
